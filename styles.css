@@ -3,7 +3,25 @@ body {
   color: #fff; /* Ensure text is visible on dark background */
 }
 
-/* Add this to your CSS */
+/* Update navbar background color */
+.navbar {
+  background-color: rgb(34, 34, 34) !important;
+}
+
+.navbar-light {
+  background-color: rgb(34, 34, 34) !important;
+}
+
+.bg-light {
+  background-color: rgb(34, 34, 34) !important;
+}
+
+/* Update link colors for visibility */
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+  color: #fff !important;
+}
+
 @media (max-width: 991.98px) {
   .navbar-collapse {
     position: fixed;
