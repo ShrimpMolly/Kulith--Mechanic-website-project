@@ -120,6 +120,9 @@ body {
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Changed shadow direction */
     padding: 2rem 1rem;
     z-index: 1000;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100vh; /* Full viewport height */
+    padding-bottom: 2rem; /* Add some bottom padding for scroll space */
   }
 
   .navbar-collapse.show {
@@ -130,6 +133,7 @@ body {
     margin-top: 2rem;
     width: 100%; /* Make nav list full width */
     gap: 0.5rem; /* Space between nav items */
+    padding-bottom: 2rem; /* Extra padding at bottom for better scroll experience */
   }
 
   .nav-item {
@@ -215,10 +219,27 @@ body {
     background-color: rgb(34, 34, 34) !important;
     border: none;
     padding-left: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .dropdown-item {
     background-color: transparent !important;
+  }
+
+  /* Optional: Make scrollbar less visible but still functional */
+  .navbar-collapse::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .navbar-collapse::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .navbar-collapse::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
   }
 }
 
