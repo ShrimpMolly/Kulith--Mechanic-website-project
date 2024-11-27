@@ -5,24 +5,75 @@ body {
 
 /* Update navbar background color */
 .navbar {
-  background-color: rgb(34, 34, 34) !important;
+  background-color: rgb(45, 45, 45) !important;
+  padding: 1rem 2rem; /* Increase padding for larger navbar */
 }
 
 .navbar-light {
-  background-color: rgb(34, 34, 34) !important;
+  background-color: rgb(45, 45, 45) !important;
 }
 
 .bg-light {
-  background-color: rgb(34, 34, 34) !important;
+  background-color: rgb(45, 45, 45) !important;
 }
 
 /* Update link colors for visibility */
 .navbar-light .navbar-brand,
 .navbar-light .nav-link {
   color: #fff !important;
+  font-size: 1.25rem; /* Increase font size for larger text */
+}
+
+.hero-sizing {
+  width: 100%; /* Full width of the parent container */
+  height: auto; /* Height adjusts to maintain aspect ratio */
+  position: relative; /* Allows proper positioning of child elements */
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.hero-sizing img {
+  width: 100%; /* Make the image resize with the parent */
+  height: auto; /* Maintain image height proportional to parent */
+  object-fit: contain; /* Ensures the image scales correctly */
+  position: relative; /* Ensures the image aligns properly */
+}
+
+@media (max-width: 1061px) {
+  .navbar-light .navbar-brand,
+  .navbar-light .nav-link {
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  .nav-item {
+    padding: 0 0.5rem; /* Reduce horizontal padding */
+  }
+
+  .navbar-nav {
+    gap: 0.5rem; /* Add spacing between nav items */
+  }
+}
+
+@media (max-width: 811px) {
+  .navbar-light .navbar-brand,
+  .navbar-light .nav-link {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
+  /* Update navbar background color */
+  .navbar {
+    background-color: rgb(34, 34, 34) !important;
+    padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-light {
+    background-color: rgb(34, 34, 34) !important;
+  }
+
+  .bg-light {
+    background-color: rgb(34, 34, 34) !important;
+  }
   .navbar-collapse {
     position: fixed;
     top: 0;
@@ -30,7 +81,7 @@ body {
     width: 250px;
     height: 100vh;
     background: rgb(38, 38, 38); /* Updated background color */
-    transition: all 0.3s ease-in-out;
+    transition: all 200ms ease-in-out;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Changed shadow direction */
     padding: 2rem 1rem;
     z-index: 1000;
@@ -42,21 +93,34 @@ body {
 
   .navbar-nav {
     margin-top: 2rem;
+    width: 100%; /* Make nav list full width */
+    gap: 0.5rem; /* Space between nav items */
   }
 
   .nav-item {
-    margin: 1rem 0;
+    margin: 0; /* Remove margin */
+    width: 100%; /* Make items full width */
+    background-color: rgb(45, 45, 45); /* Slightly lighter than navbar */
+    border-radius: 4px; /* Optional: rounded corners */
   }
 
   .nav-link {
     font-size: 1.1rem;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
+    padding: 1rem !important; /* Consistent padding */
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
     color: #fff; /* Ensure text is visible on dark background */
   }
 
   .nav-link:hover {
-    color: #007bff;
+    color: #fff !important; /* Keep text white on hover */
+    transform: translateX(10px); /* Slight shift on hover */
+  }
+
+  /* Hover effect */
+  .nav-item:hover {
+    background-color: rgb(55, 55, 55); /* Lighter shade on hover */
   }
 
   .navbar-toggler {
@@ -77,7 +141,7 @@ body {
     transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
-    transition: opacity 300ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
   }
 
   .menu-close {
