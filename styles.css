@@ -102,13 +102,6 @@ body {
   }
 }
 
-@media (max-width: 811px) {
-  .navbar-light .navbar-brand,
-  .navbar-light .nav-link {
-    font-size: 0.7rem; /* Adjust font size for smaller screens */
-  }
-}
-
 @media (max-width: 768px) {
   /* Update navbar background color */
   .navbar {
