@@ -88,10 +88,24 @@ body {
   }
 }
 
+@media (max-width: 924px) {
+  .navbar-light .navbar-brand,
+  .navbar-light .nav-link {
+    font-size: 0.95rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 893px) {
+  .navbar-light .navbar-brand,
+  .navbar-light .nav-link {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+  }
+}
+
 @media (max-width: 811px) {
   .navbar-light .navbar-brand,
   .navbar-light .nav-link {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
   }
 }
 
