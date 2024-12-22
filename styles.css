@@ -529,8 +529,8 @@ body {
       height: 150px;          /* Adjust the banner's height as desired */
       overflow: hidden;       /* Hide overflow so the track can slide out of view */
       position: relative;
-      background-color: #f5f5f5;
       margin: 0 auto;         /* Center if narrower than the page */
+      background-color: rgb(34, 34, 34);
     }
 
     /* 2. The sliding track that contains all slides */
@@ -542,7 +542,7 @@ body {
          - linear: consistent speed
          - infinite: repeats endlessly
       */
-      animation: scroll 20s linear infinite;
+      animation: scroll 30s linear infinite;
     }
 
     /* 3. Each slide in the track */
@@ -552,7 +552,7 @@ body {
          total width for one set = 17 * 200 = 3400px
          Then we duplicate them -> 34 total slides in the track
       */
-      min-width: 200px;  
+      min-width: 250px;  
       height: 100%;
       display: flex;
       align-items: center;
@@ -561,8 +561,8 @@ body {
 
     /* 4. Images themselves: never stretch, always contained */
     .slide img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 80%;
+      max-height: 80%;
       object-fit: contain;
       display: block;
     }
