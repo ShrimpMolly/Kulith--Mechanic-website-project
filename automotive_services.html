@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  />
+  <title>Automotive Services</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  
+  <!-- Your custom styles -->
+  <style>
+    /* GENERAL RESETS & BODY STYLES */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #191919;
+      color: #ffffff;
+    }
+
+    /* BANNER / HERO SECTION */
+    .hero-banner {
+      background: url("https://via.placeholder.com/1920x600/333333/FFFFFF?text=Banner+Background") 
+        center center no-repeat;
+      background-size: cover;
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+    }
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-banner .container {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .hero-banner .breadcrumb-text {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+
+    /* SECTION HEADINGS */
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .section-subtitle {
+      color: #bbb;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    /* SERVICE BOXES */
+    .service-box {
+      background-color: #262626;
+      border: 1px solid #333;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: default;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .service-box:hover {
+      background-color: #2f2f2f;
+    }
+    .service-box h5 {
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* WHY BRING YOUR VEHICLE TO US */
+    .why-choose-us {
+      padding: 4rem 0;
+    }
+    .why-choose-us p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .why-choose-us .btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #606060;
+      border-color: #606060;
+    }
+    .why-choose-us .btn:hover {
+      background-color: #707070;
+      border-color: #707070;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testimonials {
+      background-color: #1f1f1f;
+      padding: 3rem 0;
+    }
+    .testimonials h2 {
+      margin-bottom: 2rem;
+    }
+    .testimonial-slider {
+      color: #ddd;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      color: #bbb;
+      font-weight: 400;
+      font-size: 0.95rem;
+    }
+
+    /* LOGOS SECTION */
+    .logos-section {
+      background-color: #191919;
+      padding: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .logos-section img {
+      max-height: 50px;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+    .logos-section img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    /* MEDIA QUERIES (ADJUST IF NEEDED) */
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR PLACEHOLDER (remove this if you have your own navbar code) -->
+  <!--
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    ... your navbar ...
+  </nav>
+  -->
+
+  <!-- HERO / BANNER SECTION -->
+  <section class="hero-banner d-flex align-items-center justify-content-center text-white">
+    <div class="container">
+      <h1>Automotive Services</h1>
+      <p class="breadcrumb-text">Home &gt; Automotive Services</p>
+    </div>
+  </section>
+
+  <!-- AUTO ELECTRICAL SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Auto Electrical</h2>
+      <p class="section-subtitle">
+        Diagnosis of anything electronic in a vehicle
+      </p>
+      <div class="row">
+        <!-- SERVICE BOX 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <!-- Icon placeholder -->
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Head and brake light bulbs</h5>
+          </div>
+        </div>
+        <!-- SERVICE BOX 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Diagnostic scanning of ABS braking systems</h5>
+          </div>
+        </div>
+        <!-- SERVICE BOX 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>SRS airbags</h5>
+          </div>
+        </div>
+        <!-- SERVICE BOX 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Engine Management Systems</h5>
+          </div>
+        </div>
+        <!-- SERVICE BOX 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Stereos</h5>
+          </div>
+        </div>
+        <!-- SERVICE BOX 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Reverse cameras</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MECHANICAL SERVICING SECTION -->
+  <section class="pb-5">
+    <div class="container">
+      <h2 class="section-title">Mechanical Servicing</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Fleet Maintenance</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Commercial &amp; Company Vehicle Maintenance</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Oil and Filter Change</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Brake Repairs</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Vehicle Suspensions &amp; Steering</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>All Dash and Warnings Lights</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE SERVICES SECTION -->
+  <section class="pb-5">
+    <div class="container">
+      <h2 class="section-title">More Services</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>SAS Customs</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Pre-Purchase Inspections</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Air Conditioning</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Electric &amp; Hybrid</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="service-box">
+            <img
+              src="https://via.placeholder.com/50x50/999999/FFFFFF?text=Icon"
+              alt="icon"
+              class="mx-auto d-block"
+            />
+            <h5>Battery Replacement</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BRING YOUR VEHICLE TO US -->
+  <section class="why-choose-us text-center">
+    <div class="container">
+      <h2 class="section-title">Why Bring Your Vehicle to Us?</h2>
+      <p>
+        Our team is made up of qualified auto electricians working
+        alongside our mechanics. This means it is a one-stop shop for
+        having your vehicle diagnosed and repaired correctly rather than
+        diagnosed by replacement. This means reduced costs as the problem
+        is diagnosed correctly the first time.
+      </p>
+      <a href="#" class="btn btn-secondary">Book Now</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="text-center">What Our Clients Say</h2>
+      <!-- Example single testimonial (could use a carousel for multiple) -->
+      <div class="testimonial-slider">
+        <p class="mb-4">
+          "Really good guys. Service was minty, was in and out -
+          needed a new job, now I need one."
+        </p>
+        <div class="testimonial-author">- Jason Barrowes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS SECTION -->
+  <section class="logos-section">
+    <!-- Example brand logos (replace with real brand logos) -->
+    <img
+      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=AUDI"
+      alt="Audi"
+    />
+    <img
+      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=BMW"
+      alt="BMW"
+    />
+    <img
+      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=Ford"
+      alt="Ford"
+    />
+    <img
+      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=CityHop"
+      alt="CityHop"
+    />
+    <img
+      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=Fletcher"
+      alt="Fletcher"
+    />
+    <img
+      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=Rescue"
+      alt="Rescue"
+    />
+    <!-- Add more logos as needed -->
+  </section>
+
+  <!-- NO FOOTER CONTENT HERE -->
+  
+  <!-- Bootstrap JS (CDN) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
