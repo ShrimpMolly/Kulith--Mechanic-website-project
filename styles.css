@@ -50,9 +50,9 @@ body {
   min-width: 250px;
 }
 
-.dropdown:hover .dropdown-menu {
+/* .dropdown:hover .dropdown-menu {
   display: block;
-}
+} */
 
 .dropdown-item {
   color: #fff !important;
@@ -214,9 +214,9 @@ body {
   }
 
   /* Remove hover behavior for mobile */
-  .dropdown:hover .dropdown-menu {
+  /* .dropdown:hover .dropdown-menu {
     display: none;
-  }
+  } */
 
   /* Show dropdown when active class is present */
   .dropdown-menu.show {
@@ -269,12 +269,12 @@ body {
   }
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
   /* Desktop-only hover behavior */
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-}
+} */
 
 /* Footer Styles */
 .site-footer {

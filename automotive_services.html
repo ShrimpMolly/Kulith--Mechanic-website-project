@@ -16,6 +16,11 @@
   
   <!-- Your custom styles -->
    <link rel="stylesheet" href="styles.css" />
+    <!-- Add Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
 <body>
 
@@ -65,18 +70,23 @@
       >
         <ul class="navbar-nav d-flex align-items-center">
           <li class="nav-item px-2">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item dropdown px-2">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Automotive Services
-            </a>
+          <li class="nav-item dropdown px-2" style="position: relative;">
+            <!-- Inline container for text + toggle -->
+            <div class="d-inline-flex align-items-center">
+              <a class="nav-link" href="automotive_services.html">
+                Automotive Services
+              </a>
+              <button
+                class="btn nav-link dropdown-toggle dropdown-toggle-split"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+            </div>
             <ul class="dropdown-menu">
               <li>
                 <a class="dropdown-item" href="#auto-repairs">Auto Repairs</a>
