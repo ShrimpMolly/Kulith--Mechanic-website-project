@@ -511,3 +511,69 @@ body {
     font-size: 2rem;
   }
 }
+
+/* Slider logo styling here */
+    /* Basic reset */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+
+    /* 1. The container that holds the sliding track */
+    .slider-container {
+      width: 100%;            /* Can be fixed (e.g., 800px) or 100% of parent */
+      height: 150px;          /* Adjust the banner's height as desired */
+      overflow: hidden;       /* Hide overflow so the track can slide out of view */
+      position: relative;
+      background-color: #f5f5f5;
+      margin: 0 auto;         /* Center if narrower than the page */
+    }
+
+    /* 2. The sliding track that contains all slides */
+    .slider-track {
+      display: flex;   
+      /* 
+         Animation details:
+         - 20s: total duration to shift from 0 to -3400px (example)
+         - linear: consistent speed
+         - infinite: repeats endlessly
+      */
+      animation: scroll 20s linear infinite;
+    }
+
+    /* 3. Each slide in the track */
+    .slide {
+      /* 
+         If each slide is 200px wide, and you have 17 slides in the first set,
+         total width for one set = 17 * 200 = 3400px
+         Then we duplicate them -> 34 total slides in the track
+      */
+      min-width: 200px;  
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 4. Images themselves: never stretch, always contained */
+    .slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* 5. Keyframe for infinite scrolling */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        /* Move left by the width of the first 17 slides (17 * 200 = 3400px) */
+        transform: translateX(-3400px);
+      }
+    }

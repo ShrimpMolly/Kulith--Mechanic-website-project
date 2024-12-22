@@ -367,11 +367,11 @@
   </section>
 
   <!-- TESTIMONIALS SECTION -->
-  <section class="testimonials">
+  <!-- <section class="testimonials">
     <div class="container">
-      <h2 class="text-center">What Our Clients Say</h2>
+      <h2 class="text-center">What Our Clients Say</h2> -->
       <!-- Example single testimonial (could use a carousel for multiple) -->
-      <div class="testimonial-slider">
+      <!-- <div class="testimonial-slider">
         <p class="mb-4">
           "Really good guys. Service was minty, was in and out -
           needed a new job, now I need one."
@@ -379,37 +379,14 @@
         <div class="testimonial-author">- Jason Barrowes</div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- LOGOS SECTION -->
-  <section class="logos-section">
-    <!-- Example brand logos (replace with real brand logos) -->
-    <img
-      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=AUDI"
-      alt="Audi"
-    />
-    <img
-      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=BMW"
-      alt="BMW"
-    />
-    <img
-      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=Ford"
-      alt="Ford"
-    />
-    <img
-      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=CityHop"
-      alt="CityHop"
-    />
-    <img
-      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=Fletcher"
-      alt="Fletcher"
-    />
-    <img
-      src="https://via.placeholder.com/80x40/555555/FFFFFF?text=Rescue"
-      alt="Rescue"
-    />
-    <!-- Add more logos as needed -->
-  </section>
+  <!-- Slider Logo wrapper -->
+  <div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+      <!-- Slides will be inserted here by JavaScript -->
+    </div>
+  </div>
 
   <!-- FOOTER CONTENT HERE -->
   <footer class="site-footer">
@@ -512,5 +489,48 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <script>
+    /**
+     * 1. Create an array of image filenames:
+     *    Car Logo (1).png, Car Logo (2).png, ... , Car Logo (17).png
+     *    (Adjust extension if .jpg/.webp, etc.)
+     */
+    const logos = Array.from({ length: 17 }, (_, i) => `Car Logo (${i + 1}).png`);
+
+    // 2. Get reference to the slider track
+    const sliderTrack = document.getElementById('sliderTrack');
+
+    /**
+     * 3. Helper function to create a slide <div> with the specified image
+     */
+    function createSlide(logoFilename) {
+      const slideDiv = document.createElement('div');
+      slideDiv.className = 'slide';
+
+      const img = document.createElement('img');
+      // Images stored under currentdir/assets/...
+      img.src = `./assets/${logoFilename}`;
+      img.alt = logoFilename;
+
+      slideDiv.appendChild(img);
+      return slideDiv;
+    }
+
+    /**
+     * 4. Insert the 17 original slides
+     */
+    logos.forEach((logo) => {
+      const slide = createSlide(logo);
+      sliderTrack.appendChild(slide);
+    });
+
+    /**
+     * 5. Duplicate the same 17 slides to achieve seamless infinite looping
+     */
+    logos.forEach((logo) => {
+      const slide = createSlide(logo);
+      sliderTrack.appendChild(slide);
+    });
+  </script>
 </body>
 </html>
