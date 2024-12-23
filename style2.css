@@ -1,0 +1,89 @@
+/*
+  Minimal custom overrides to apply a consistent dark-gray (#222 / #2D2D2D)
+  color scheme, with white or light text. 
+*/
+
+/* Global */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #eee; /* Light text for dark backgrounds */
+    background-color: #222;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* A second background shade for alternating sections */
+  .section-alt-bg {
+    background-color: #2D2D2D;
+  }
+  
+  /* Footer background */
+  .footer-bg {
+    background-color: #222;
+  }
+  
+  /* Hero Section */
+  .hero-banner {
+    background-color: #222; /* fallback color if image doesn't load */
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-banner .quote-card {
+    background-color: #2D2D2D;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    max-width: 250px;
+  }
+  
+  /* Buttons */
+  .btn-light {
+    color: #000;
+    background-color: #eee;
+    border: none;
+  }
+  .btn-light:hover {
+    background-color: #ccc;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #2D2D2D;
+    border: none;
+    border-radius: 8px;
+  }
+  .card-img-top {
+    object-fit: cover;
+    height: 200px; 
+    width: 100%;
+  }
+  .service-card:hover,
+  .more-service-card:hover,
+  .blog-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Badge Box */
+  .badge-box {
+    background-color: #2D2D2D;
+    border-radius: 8px;
+  }
+  .badge-box h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Text Classes */
+  .text-warning {
+    color: #f3c623 !important; /* Subtle gold accent, optional */
+  }
+  .text-white {
+    color: #fff !important;
+  }
+  .text-muted {
+    color: #bbb !important;
+  }
