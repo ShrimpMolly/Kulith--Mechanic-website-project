@@ -12,18 +12,131 @@
   />
 
   <!-- AOS (Animate On Scroll) Library CSS -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" 
-    integrity="sha512-Ho4qF7Dk4C+lt55nVIR1d44C1xAAaSdEn/NWuZK/wuG3TUdLZ9g7PU1BB6R2zXp3POlQnAPkyeT9iMKn1pefkg==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"
-  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Add Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div
+      class="container-fluid d-flex justify-content-between align-items-center"
+    >
+      <!-- Left Section -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="assets/logo.png"
+            alt="Logo"
+            class="me-2"
+            style="height: 40px"
+          />
+        </a>
+      </div>
+
+      <!-- Mobile Toggle Button -->
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img
+          src="assets/Menu-default.png"
+          alt="Menu"
+          class="menu-icon menu-default"
+        />
+        <img
+          src="assets/Menu-close.png"
+          alt="Close"
+          class="menu-icon menu-close"
+        />
+      </button>
+
+      <!-- Right Section -->
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav d-flex align-items-center">
+          <li class="nav-item px-2">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown px-2" style="position: relative;">
+            <!-- Inline container for text + toggle -->
+            <div class="d-inline-flex align-items-center">
+              <a class="nav-link" href="automotive_services.html">
+                Automotive Services
+              </a>
+              <button
+                class="btn nav-link dropdown-toggle dropdown-toggle-split"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+            </div>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#auto-repairs">Auto Repairs</a>
+              </li>
+              <li><a class="dropdown-item" href="#wof">WOF</a></li>
+              <li>
+                <a class="dropdown-item" href="#auto-electrical"
+                  >Auto Electrical</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#air-conditioning"
+                  >Air Conditioning</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#suspension"
+                  >Vehicle Suspension & <br />
+                  Steering Systems</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#fleet"
+                  >Commercial Vehicle <br />Fleet Maintenance</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#batteries">Batteries</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Locations</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Our Team</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Testimonials</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <!-- ================== Hero Section ================== -->
 <section 
@@ -365,49 +478,104 @@
   </div>
 </section>
 
-<!-- ================== About & Quick Access ================== -->
-<section class="py-5 section-alt-bg">
-  <div class="container">
-    <div class="row g-5">
-      <!-- About -->
-      <div class="col-md-4" data-aos="fade-right">
-        <h3 class="fw-bold mb-3 text-white">About</h3>
-        <p class="text-muted">
-          Superior Automotive Services has been providing top-notch vehicle repairs, 
-          maintenance, and detailed automotive services for over 50 years. With locations 
-          across Central Auckland, North Shore, and West Auckland, our team is always 
-          ready to help you get back on the road.
-        </p>
-      </div>
-      <!-- Quick Access -->
-      <div class="col-md-4" data-aos="fade-up">
-        <h3 class="fw-bold mb-3 text-white">Quick Access</h3>
-        <ul class="list-unstyled text-muted">
-          <li class="mb-2">Car Repairs &amp; Maintenance</li>
-          <li class="mb-2">WOF (Warrant of Fitness)</li>
-          <li class="mb-2">Auto Electrical Service</li>
-          <li class="mb-2">Oil Changes &amp; Tyre Services</li>
-        </ul>
-      </div>
-      <!-- Contact Details -->
-      <div class="col-md-4" data-aos="fade-left">
-        <h3 class="fw-bold mb-3 text-white">Contact Details</h3>
-        <p class="text-muted mb-1">Phone: 000-123-456</p>
-        <p class="text-muted mb-1">Email: info@superiorautoservice.co.nz</p>
-        <p class="text-muted">Address: 123 Car Street, Auckland</p>
+
+<!-- FOOTER CONTENT HERE -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="container">
+      <div class="row">
+        <!-- About Column -->
+        <div class="col-md-4 footer-column">
+          <h4>About</h4>
+          <img src="assets/logo.png" alt="Logo" class="footer-logo mb-3" />
+          <p class="about-text">
+            Our Values - To provide clients with outstanding service,
+            communicate clearly the repairs required and provide costings
+            before commencing the work.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Quick Access Column -->
+        <div class="col-md-4 footer-column">
+          <h4>Quick Access</h4>
+          <div class="row">
+            <div class="col-6">
+              <ul class="quick-links">
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Automotive
+                    Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Book Now</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Locations</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Gallery</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="quick-links">
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Team</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Privacy
+                    Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-angle-double-right"></i>Terms &
+                    Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info Column -->
+        <div class="col-md-4 footer-column">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 123 Auto Street,
+              Auckland
+            </li>
+            <li><i class="fas fa-envelope"></i> info@automasters.co.nz</li>
+            <li><i class="fas fa-phone"></i> 0800 123 456</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ================== Footer ================== -->
-<footer class="py-4 footer-bg">
-  <div class="container text-center">
-    <p class="mb-0 text-muted">
-      &copy; 2024 Superior Automotive Service. All rights reserved.
-    </p>
-  </div>
 </footer>
+
 
 <!-- Bootstrap 5 JS Bundle -->
 <script 
@@ -415,12 +583,7 @@
 </script>
 
 <!-- AOS (Animate On Scroll) Library JS -->
-<script 
-  src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-  integrity="sha512-4v4c1mPeT9qO4ElMZ7HmaNwLgR9P1fE08NlE7a09lflWWo9xR05l4y7Wr4T7Xn0/DWnQAHWAMU245B5rIcq5Mg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
   // Initialize AOS
